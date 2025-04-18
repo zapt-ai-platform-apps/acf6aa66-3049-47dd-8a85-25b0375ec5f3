@@ -1,7 +1,7 @@
 {
-    "name": "reactjs-vite-tailwind-vercel",
+    "name": "alescai",
     "version": "1.0.0",
-    "description": "ReactJS app with Vite, Tailwind",
+    "description": "AI-Enhanced Learning and Smart Content Analysis Interface",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -11,8 +11,21 @@
     },
     "dependencies": {
         "@sentry/browser": "^8.41.0",
+        "@tiptap/extension-highlight": "^2.1.13",
+        "@tiptap/extension-placeholder": "^2.1.13",
+        "@tiptap/extension-task-item": "^2.1.13",
+        "@tiptap/extension-task-list": "^2.1.13",
+        "@tiptap/pm": "^2.1.13",
+        "@tiptap/react": "^2.1.13",
+        "@tiptap/starter-kit": "^2.1.13",
+        "date-fns": "^2.30.0",
+        "framer-motion": "^10.16.4",
+        "openai": "^4.24.1",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.12.0",
+        "react-router-dom": "^6.20.0",
+        "zustand": "^4.4.6"
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^4.3.4",

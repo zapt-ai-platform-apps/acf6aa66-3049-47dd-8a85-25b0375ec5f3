@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 79 70 229;
+    --color-secondary: 139 92 246;
+    --color-background: 255 255 255;
+    --color-surface: 243 244 246;
+    --color-text: 17 24 39;
+    --color-border: 229 231 235;
+  }
+
+  .dark {
+    --color-primary: 139 92 246;
+    --color-secondary: 167 139 250;
+    --color-background: 15 23 42;
+    --color-surface: 30 41 59;
+    --color-text: 241 245 249;
+    --color-border: 51 65 85;
+  }
+}
+
+@layer base {
+  html {
+    @apply font-sans antialiased;
+  }
+  
+  body {
+    @apply bg-background text-text;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary/50;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90 focus:ring-secondary/50;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-300 dark:focus:ring-gray-700;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg shadow p-4;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+}
+
+.ProseMirror {
+  @apply p-4 min-h-[200px] outline-none prose dark:prose-invert max-w-none;
+}
+
+.ProseMirror > * + * {
+  @apply mt-4;
+}
+
+.ProseMirror ul, .ProseMirror ol {
+  @apply pl-4;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  @apply text-gray-400 float-left h-0 pointer-events-none;
+  content: attr(data-placeholder);
+}
+
+.task-item {
+  @apply flex items-start gap-2 my-1;
+}
+
+.task-checkbox {
+  @apply mt-1 h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary;
+}
+
+.note-card {
+  @apply card cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors;
+}
+
+.note-card.selected {
+  @apply border-2 border-primary;
+}
+
+.made-on-zapt {
+  @apply fixed bottom-4 left-4 z-50 text-xs font-medium text-gray-500 dark:text-gray-400;
+}
